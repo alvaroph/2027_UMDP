@@ -1,0 +1,19 @@
+{
+  "respostes": [
+    { "pregunta_id": 1, "resposta_id": 2 },
+    { "pregunta_id": 2, "resposta_id": 3 },
+    { "pregunta_id": 3, "resposta_id": 1 },
+    { "pregunta_id": 4, "resposta_id": 4 },
+    { "pregunta_id": 5, "resposta_id": 2 },
+    { "pregunta_id": 6, "resposta_id": 3 },
+    { "pregunta_id": 7, "resposta_id": 1 },
+    { "pregunta_id": 8, "resposta_id": 4 },
+    { "pregunta_id": 9, "resposta_id": 2 },
+    { "pregunta_id": 10, "resposta_id": 3 },
+    { "pregunta_id": 11, "resposta_id": 1 },
+    { "pregunta_id": 12, "resposta_id": 2 },
+    { "pregunta_id": 13, "resposta_id": 4 },
+    { "pregunta_id": 14, "resposta_id": 2 },
+    { "pregunta_id": 15, "resposta_id": 3 }
+  ]
+}

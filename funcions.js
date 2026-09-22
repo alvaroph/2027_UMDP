@@ -1,0 +1,108 @@
+
+const NPREG=2
+//Creo una variable global per a guardar les preguntes rebudes
+let arrayPreguntas=[];
+
+fetch('http://localhost:3000/dades') // 1. Demanem el fitxer al servidor
+  .then(dades => dades.json()) // 2. Quan arriba, el convertim a format JSON
+  .then(data => { // 3. Un cop convertit, ja el podem fer servir!
+    console.log("Dades carregades!", data);
+    // Guardo les dades rebudes
+    arrayPreguntas=data.preguntes;
+    //crido a la funció per pintar la partida
+    iniciarPartida(data.preguntes);
+  });
+
+  function iniciarPartida(preguntes) {
+    let htmlStr=""
+    for (i=0;i<NPREG; i++){
+        htmlStr += `<p class="text-center"><img width="200px" src="${preguntes[i].imatge}">
+                    <p>${preguntes[i].pregunta}</p></p>
+           
+                    <div class="row">
+                      <div class="col-md-3"> <button onclick="marcar(${i},0)" id="${i}_0" class="btn btn-primary">${preguntes[i].respostes[0].resposta}</button></div>
+                      <div class="col-md-3"> <button onclick="marcar(${i},1)" id="${i}_1" class="btn btn-primary">${preguntes[i].respostes[1].resposta}</button></div>
+                      <div class="col-md-3"> <button onclick="marcar(${i},2)" id="${i}_2" class="btn btn-primary">${preguntes[i].respostes[2].resposta}</button></div>
+                      <div class="col-md-3"> <button onclick="marcar(${i},3)" id="${i}_3" class="btn btn-primary">${preguntes[i].respostes[3].resposta}</button></div>
+                    </div>
+                  `
+    }
+    htmlStr+=`<button id="btnEnviar" onclick="enviarRespostes()" class="hidden btn btn-danger">Enviar respostes</button>`
+    document.getElementById("partida").innerHTML=htmlStr;
+  }
+
+let estatDeLaPartida = { 
+  contadorPreguntes: 0, 
+  respostesUsuari: [] // Aquí anirem guardant les respostes 
+}; 
+
+estatDeLaPartida.respostesUsuari= new Array(NPREG).fill(null);
+
+function marcar(preg, resp){
+    console.log("En la pregunta "+preg +" has marcado "+resp)
+    //TODO: refactoritzar el codi següent_
+    //Borro el que tenia marcat abans com a actiu i ho deixo com a normal (Es una guarrada tal com està) 
+    document.getElementById(`${preg}_0`).classList.remove("btn-warning")
+    document.getElementById(`${preg}_0`).classList.add("btn-primary")
+    document.getElementById(`${preg}_1`).classList.remove("btn-warning")
+    document.getElementById(`${preg}_1`).classList.add("btn-primary")    
+    document.getElementById(`${preg}_2`).classList.remove("btn-warning")
+    document.getElementById(`${preg}_2`).classList.add("btn-primary")    
+    document.getElementById(`${preg}_3`).classList.remove("btn-warning")    
+    document.getElementById(`${preg}_3`).classList.add("btn-primary")
+    //Poso com a actual la pregunta marcada
+    document.getElementById(`${preg}_${resp}`).classList.remove("btn-primary")    
+    document.getElementById(`${preg}_${resp}`).classList.add("btn-warning")
+    
+    
+    //Miro si la pregunta ja ha estat contestada abans, si es aixi, no incremento
+    if (estatDeLaPartida.respostesUsuari[preg]==null){
+        estatDeLaPartida.contadorPreguntes++;
+    }
+
+    //en qualsevol cas, guardo la nova resposta al array de respostes. 
+    estatDeLaPartida.respostesUsuari[preg]={
+            id: arrayPreguntas[preg].id, //com puc tenir l'id de la pregunta?
+            resp: resp
+        }
+
+    if (estatDeLaPartida.contadorPreguntes==NPREG){
+        document.getElementById("btnEnviar").classList.remove("hidden");
+    }
+    //Actualitzem el marcador
+    renderMarcador();
+}
+
+  function renderMarcador(){
+   pctActual=(estatDeLaPartida.contadorPreguntes/NPREG)*100
+   document.getElementById("marcador").innerHTML=`
+   <div class="progress">
+        <div class="progress-bar" role="progressbar" 
+            style="width: ${pctActual}%" 
+              aria-valuenow="${pctActual}" 
+              aria-valuemin="1" 
+              aria-valuemax="${NPREG}">
+        </div>
+    </div>
+   `
+  }
+
+  function enviarRespostes(){
+
+      fetch("http://localhost:3000/respostes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(estatDeLaPartida)
+    })
+      .then(response => response.json())
+      .then(resultat => {
+        console.log("Correctes:", resultat.correctes);
+        console.log("Incorrectes:", resultat.incorrectes);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+      
+  }

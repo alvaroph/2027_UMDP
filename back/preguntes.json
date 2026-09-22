@@ -1,0 +1,169 @@
+{
+  "preguntes": [
+    {
+      "id": 41,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Corea del Sud" },
+        { "id": 2, "resposta": "Japó" },
+        { "id": 3, "resposta": "Vietnam" },
+        { "id": 4, "resposta": "Xina" }
+      ],
+      "imatge": "https://flagcdn.com/w640/jp.png"
+    },
+    {
+      "id": 62,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Noruega" },
+        { "id": 2, "resposta": "Dinamarca" },
+        { "id": 3, "resposta": "Suècia" },
+        { "id": 4, "resposta": "Finlàndia" }
+      ],
+      "imatge": "https://flagcdn.com/w640/se.png"
+    },
+    {
+      "id": 133,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Canadà" },
+        { "id": 2, "resposta": "Perú" },
+        { "id": 3, "resposta": "Estats Units" },
+        { "id": 4, "resposta": "Àustria" }
+      ],
+      "imatge": "https://flagcdn.com/w640/ca.png"
+    },
+    {
+      "id": 554,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Argentina" },
+        { "id": 2, "resposta": "Mèxic" },
+        { "id": 3, "resposta": "Colòmbia" },
+        { "id": 4, "resposta": "Brasil" }
+      ],
+      "imatge": "https://flagcdn.com/w640/br.png"
+    },
+    {
+      "id": 75,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Irlanda" },
+        { "id": 2, "resposta": "Itàlia" },
+        { "id": 3, "resposta": "Hongria" },
+        { "id": 4, "resposta": "França" }
+      ],
+      "imatge": "https://flagcdn.com/w640/it.png"
+    },
+    {
+      "id": 86,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Bèlgica" },
+        { "id": 2, "resposta": "Romania" },
+        { "id": 3, "resposta": "Alemanya" },
+        { "id": 4, "resposta": "Països Baixos" }
+      ],
+      "imatge": "https://flagcdn.com/w640/de.png"
+    },
+    {
+      "id": 77,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Austràlia" },
+        { "id": 2, "resposta": "Fiji" },
+        { "id": 3, "resposta": "Regne Unit" },
+        { "id": 4, "resposta": "Nova Zelanda" }
+      ],
+      "imatge": "https://flagcdn.com/w640/au.png"
+    },
+    {
+      "id": 98,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Bangladesh" },
+        { "id": 2, "resposta": "Sri Lanka" },
+        { "id": 3, "resposta": "Pakistan" },
+        { "id": 4, "resposta": "Índia" }
+      ],
+      "imatge": "https://flagcdn.com/w640/in.png"
+    },
+    {
+      "id": 39,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Israel" },
+        { "id": 2, "resposta": "Grècia" },
+        { "id": 3, "resposta": "Xipre" },
+        { "id": 4, "resposta": "Finlàndia" }
+      ],
+      "imatge": "https://flagcdn.com/w640/gr.png"
+    },
+    {
+      "id": 13,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Kenya" },
+        { "id": 2, "resposta": "Etiòpia" },
+        { "id": 3, "resposta": "Sud-àfrica" },
+        { "id": 4, "resposta": "Ghana" }
+      ],
+      "imatge": "https://flagcdn.com/w640/za.png"
+    },
+    {
+      "id": 61,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Argentina" },
+        { "id": 2, "resposta": "Guatemala" },
+        { "id": 3, "resposta": "Hondures" },
+        { "id": 4, "resposta": "Uruguai" }
+      ],
+      "imatge": "https://flagcdn.com/w640/ar.png"
+    },
+    {
+      "id": 18,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Marroc" },
+        { "id": 2, "resposta": "Turquia" },
+        { "id": 3, "resposta": "Algèria" },
+        { "id": 4, "resposta": "Tunísia" }
+      ],
+      "imatge": "https://flagcdn.com/w640/tr.png"
+    },
+    {
+      "id": 63,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Polònia" },
+        { "id": 2, "resposta": "Dinamarca" },
+        { "id": 3, "resposta": "Àustria" },
+        { "id": 4, "resposta": "Suïssa" }
+      ],
+      "imatge": "https://flagcdn.com/w640/ch.png"
+    },
+    {
+      "id": 24,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Japó" },
+        { "id": 2, "resposta": "Corea del Sud" },
+        { "id": 3, "resposta": "Mongòlia" },
+        { "id": 4, "resposta": "Corea del Nord" }
+      ],
+      "imatge": "https://flagcdn.com/w640/kr.png"
+    },
+    {
+      "id": 55,
+      "pregunta": "A quin país pertany aquesta bandera?",
+      "respostes": [
+        { "id": 1, "resposta": "Portugal" },
+        { "id": 2, "resposta": "Itàlia" },
+        { "id": 3, "resposta": "Mèxic" },
+        { "id": 4, "resposta": "Espanya" }
+      ],
+      "imatge": "https://flagcdn.com/w640/mx.png"
+    }
+  ]
+}
