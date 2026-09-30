@@ -3,7 +3,7 @@ const cors = require("cors");
 const mysql = require("mysql2/promise");
 
 const app = express();
-const PORT = 3333;
+const PORT = 13333;
 
 app.use(cors());
 app.use(express.json());
@@ -11,11 +11,12 @@ app.use(express.json());
 app.use(express.static("public"));
 
 const db = mysql.createPool({
+  socketPath: '/run/mysqld/mysqld.sock'
   host: "localhost",
   port: 3306,
-  user: "root",
-  password: "root",
-  database: "quiz"
+  user: "aperezh_quiz",
+  password: "InsPedralbes_2026",
+  database: "aperezh_quiz"
 });
 
 app.get("/dades", async function (req, res) {

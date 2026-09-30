@@ -214,7 +214,7 @@ window.addEventListener("load", function () {
 
 
 
-      fetch('http://localhost:3333/dades') // 1. Demanem el fitxer al servidor
+      fetch('http://localhost:13333/dades') // 1. Demanem el fitxer al servidor
         .then(dades => dades.json()) // 2. Quan arriba, el convertim a format JSON
         .then(data => { // 3. Un cop convertit, ja el podem fer servir!
           console.log("Dades carregades!", data);
