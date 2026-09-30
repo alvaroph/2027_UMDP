@@ -1,0 +1,25 @@
+services:
+
+  mysql:
+    image: mysql:8.4
+    container_name: quiz_mysql
+    restart: unless-stopped
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: quiz
+
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d
+
+  adminer:
+      image: adminer
+      container_name: quiz_adminer
+      restart: unless-stopped
+
+volumes:
+  mysql_data:
